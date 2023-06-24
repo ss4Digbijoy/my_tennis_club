@@ -1,0 +1,43 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+    {%block style%}
+    <link rel="stylesheet" href="{% static 'Nav.css' %}">
+    {%endblock%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%block meta%}
+    <meta name="description" content="HEY WANNA HAVE WEDDING PHOTOS">
+    <meta name="keywords" content="photos, wedding">
+
+    <title>Homwe</title>
+    {%endblock%}
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="/Nav">Home</a>
+        
+        <a href="/contact">Contact</a>
+        <a href="/About">About</a>
+        <a href="/Pot">Potrait</a>
+      </div>
+      <div></div>
+    {% block heri%}
+    <div class="container">
+        <img src={%static "11.jpg" %} alt="Snow" style="width:100%; height: auto;"/>
+    
+        <div class="centered">Centered</div>
+    </div>
+       
+{%include "image.html" %}
+{%include "About.html" %}
+  {%endblock%}
+
+        {%include "Footer.html"%}
+    
+        
+</body>
+</html>

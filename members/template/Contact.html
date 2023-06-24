@@ -1,0 +1,21 @@
+{%extends "Nav.html"%}
+{%block meta%}
+<meta name="description" content="HEY WANNA HAVE WEDDING PHOTOS">
+<meta name="keywords" content="photos, wedding">
+
+<title>Contact</title>
+{%endblock%}
+{%block heri%}
+<div >
+<form action="" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">submit</button>
+
+</form>
+
+{%if done%}
+<p>SENT</p>
+{%endif%}
+</div>
+{%endblock%}
